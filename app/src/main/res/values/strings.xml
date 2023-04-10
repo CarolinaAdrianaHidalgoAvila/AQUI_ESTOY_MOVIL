@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">AQUI_ESTOY</string>
-    <string name="open_nav">Open Navigation Drawer</string>
-    <string name="close_nav">Close Navigation Drawer</string>
+
+    <string name="sig_in_title">Registrarse</string>
+    <string name="placeholder_email">Correo electronico</string>
+    <string name="placeholder_password">Contraseña</string>
+    <string name="placeholder_confirmPassword">Confirmar contraseña</string>
+    <string name="placeholder_name">Nombre</string>
+    <string name="placeholder_numero">Numero</string>
 
 </resources>
