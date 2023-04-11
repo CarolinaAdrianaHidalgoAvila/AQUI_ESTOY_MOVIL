@@ -5,4 +5,6 @@
     <string name="get_in_title">Ingresar</string>
     <string name="placeholder_email">Correo electronico</string>
     <string name="placeholder_password">Contraseña</string>
+    <string name="share_button_description">share</string>
+    <string name="love_button_description">love</string>
 </resources>
