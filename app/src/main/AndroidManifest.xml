@@ -12,6 +12,9 @@
         android:theme="@style/Theme.AQUI_ESTOY_light"
         tools:targetApi="31">
         <activity
+            android:name=".portada"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
