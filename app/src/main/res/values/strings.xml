@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AQUI_ESTOY</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
     <string name="get_in_title">Ingresar</string>
     <string name="placeholder_email">Correo electronico</string>
     <string name="placeholder_password">Contraseña</string>
