@@ -20,6 +20,7 @@
         android:layout_gravity="bottom"
         app:backgroundTint="@android:color/white"
         app:fabCradleMargin="20dp"
+        android:layout_marginStart="0dp"
         app:fabCradleRoundedCornerRadius="50dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -30,6 +31,7 @@
             app:itemIconTint="@drawable/botom_nav_colors"
             app:itemTextColor="@drawable/botom_nav_colors"
             app:labelVisibilityMode="labeled"
+            android:layout_marginStart="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:menu="@menu/bottom_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
