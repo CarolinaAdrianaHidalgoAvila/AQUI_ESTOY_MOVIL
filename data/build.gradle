@@ -7,3 +7,11 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
 }
+dependencies {
+    implementation project(":domain")
+    //Retrofit implementation
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+    runtimeOnly group: 'org.jetbrains.kotlinx', name: 'kotlinx-coroutines-android', version: '1.6.4'
+}
