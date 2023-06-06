@@ -13,7 +13,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class RemoteDataSource @Inject constructor(val apiRest: RetrofitBuilder) : IRemoteDataSource {
-    override suspend fun getPet(apiKey: String): Pet {
+    override suspend fun getPet(IdUser: String, IdPet: String): Pet {
         TODO("Not yet implemented")
     }
 
