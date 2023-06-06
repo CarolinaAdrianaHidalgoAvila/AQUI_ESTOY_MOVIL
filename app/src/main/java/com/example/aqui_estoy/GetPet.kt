@@ -3,6 +3,7 @@ package com.example.aqui_estoy
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.domain.Pet
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,15 +16,18 @@ import com.example.aqui_estoy.RestApiAdapterPet as RestApiAdapterPet
 
 class GetPet : AppCompatActivity() {
 
-    lateinit var tvNombre: TextView
-    lateinit var tvFechaNacimiento: TextView
-    lateinit var tvGenero: TextView
-    lateinit var tvCollar: TextView
-    lateinit var tvEspecie: TextView
+    private lateinit var viewModel: GetPetViewModel
+    private lateinit var tvNombre: TextView
+    private lateinit var tvFechaNacimiento: TextView
+    private lateinit var tvGenero: TextView
+    private lateinit var tvCollar: TextView
+    private lateinit var tvEspecie: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_get_pet)
+
+        viewModel = ViewModelProvider(this).get(GetPetViewModel::class.java)
 
         tvNombre = findViewById(R.id.tv_name_pet)
         tvFechaNacimiento = findViewById(R.id.tv_fecha_nacimiento)
@@ -34,32 +38,21 @@ class GetPet : AppCompatActivity() {
         val idUser = "632333ceca137c2c4b95168c"
         val idPet = "635716a5a2059dbd379482bb"
 
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val pet = getPetFromApi(idUser, idPet)
-                actualizarInterfazUsuario(pet)
-            } catch (e: Exception) {
-                e.printStackTrace()
+        viewModel.pet.observe(this, { pet ->
+            pet?.let {
+                actualizarInterfazUsuario(it)
             }
-        }
-    }
+        })
 
-    private suspend fun getPetFromApi(idUser: String, idPet: String): Pet {
-        val restApiAdapter = RestApiAdapterPet()
-        val endPoint = restApiAdapter.connectionApi()
-        return withContext(Dispatchers.IO) {
-            endPoint.getPet(idUser, idPet)
-        }
+        viewModel.fetchPet(idUser, idPet)
     }
 
     private fun actualizarInterfazUsuario(pet: Pet) {
-        runOnUiThread {
-            tvNombre.text = pet.namePet
-            tvFechaNacimiento.text = formatDate(pet.birthDate)
-            tvGenero.text = getGenderLabel(pet.gender)
-            tvCollar.text = getYesNoLabel(pet.hasNecklace)
-            tvEspecie.text = pet.specie
-        }
+        tvNombre.text = pet.namePet
+        tvFechaNacimiento.text = formatDate(pet.birthDate)
+        tvGenero.text = getGenderLabel(pet.gender)
+        tvCollar.text = getYesNoLabel(pet.hasNecklace)
+        tvEspecie.text = pet.specie
     }
 
     private fun formatDate(date: String): String {

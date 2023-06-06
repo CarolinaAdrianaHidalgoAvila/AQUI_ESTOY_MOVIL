@@ -3,6 +3,7 @@ package com.example.aqui_estoy
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import com.example.domain.Publication
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,6 +14,7 @@ import java.util.*
 import com.example.aqui_estoy.RestApiAdapterPublication as RestApiAdapterPublication
 
 class PostPage : AppCompatActivity() {
+    private lateinit var viewModel: GetPublicationViewModel
     lateinit var tvNamePet: TextView
     lateinit var tvSpecies: TextView
     lateinit var tvDatePublication: TextView
@@ -22,6 +24,9 @@ class PostPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_page)
+
+        viewModel = ViewModelProvider(this).get(GetPublicationViewModel::class.java)
+
 
         tvNamePet = findViewById(R.id.tv_namePet)
         tvSpecies = findViewById(R.id.textEspecie)
@@ -33,25 +38,14 @@ class PostPage : AppCompatActivity() {
         val idUser = "632333ceca137c2c4b95168c"
         val idPublication = "6388d999441e804fc380f4f5"
 
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val publication = getPublicationFromApi(idUser, idPublication)
-                updateUI(publication)
-            } catch (e: Exception) {
-                e.printStackTrace()
+        viewModel.publication.observe(this, { publication ->
+            publication?.let {
+                updateUI(it)
             }
-        }
+        })
+
+        viewModel.fetchPublication(idUser, idPublication)
     }
-        private suspend fun getPublicationFromApi(
-            idUser: String,
-            idPublication: String
-        ): Publication {
-            val restApiAdapter = RestApiAdapterPublication()
-            val endPoint = restApiAdapter.connectionApi()
-            return withContext(Dispatchers.IO) {
-                endPoint.getPublication(idUser, idPublication)
-            }
-        }
 
         private fun updateUI(publication: Publication) {
             runOnUiThread {

@@ -14,10 +14,13 @@
         android:theme="@style/Theme.AQUI_ESTOY_light"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileUser"
+            android:exported="false" />
+        <activity
             android:name=".GetPet"
             android:exported="false" />
         <activity
-            android:name=".portada"
+            android:name=".PostPage"
             android:exported="false" />
         <activity
             android:name=".Create_Pet_Found"
@@ -40,7 +43,7 @@
             android:value="AIzaSyBR3w-Ic1FJC4x3Qt5WGzgfxF0TLJutQLg" />
 
         <activity
-            android:name=".PostPage"
+            android:name=".portada"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,8 +51,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
     </application>
 
 </manifest>

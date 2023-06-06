@@ -8,5 +8,6 @@ class ConstantsRestApi {
         const val URL_BASE = "https://aquiestoymongodb.azurewebsites.net/api/"
         const val URL_PET ="users/{idUser}/pets/{idPet}"
         const val URL_PUBLICATION ="users/{idUser}/lostPetsPosts/{idPublication}"
+        const val URL_USER ="users/{idUser}"
     }
 }
