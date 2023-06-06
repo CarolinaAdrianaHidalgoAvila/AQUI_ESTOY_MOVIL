@@ -10,4 +10,5 @@ java {
 dependencies {
     implementation project(":data")
     implementation project(":domain")
+    implementation 'javax.inject:javax.inject:1'
 }
