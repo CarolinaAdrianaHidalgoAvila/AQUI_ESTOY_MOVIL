@@ -9,3 +9,4 @@ data class User(
     val address: String,
     val photo: String
 ) {}
+

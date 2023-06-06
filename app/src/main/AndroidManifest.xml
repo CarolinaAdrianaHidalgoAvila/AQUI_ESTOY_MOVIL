@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AQUI_ESTOY_light"
         tools:targetApi="31">
         <activity
+            android:name=".ProfileUser"
+            android:exported="false" />
+        <activity
+            android:name=".GetPet"
+            android:exported="false" />
+        <activity
             android:name=".PostPage"
             android:exported="false" />
         <activity
@@ -33,9 +39,11 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBR3w-Ic1FJC4x3Qt5WGzgfxF0TLJutQLg" />
+
         <activity
             android:name=".portada"
             android:exported="true">

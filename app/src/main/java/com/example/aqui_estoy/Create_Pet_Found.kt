@@ -11,8 +11,6 @@ class Create_Pet_Found : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_pet_found)
-        val mapFragment = supportFragmentManager.findFragmentById(R.id.textView_usertag) as SupportMapFragment
-        mapFragment.getMapAsync(this)
     }
     override fun onMapReady(map: GoogleMap) {
         googleMap = map
