@@ -41,12 +41,12 @@
 
                     <!-- Nombre del usuario -->
                     <TextView
-                        android:id="@+id/nameTextView"
+                        android:id="@+id/tv_nameuser"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_toEndOf="@id/avatarImageView"
-                        android:text="Nombre de Usuario"
+                        android:text="Roberto Rocabado"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -56,7 +56,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_marginStart="16dp"
-                        android:layout_toEndOf="@id/nameTextView"
+                        android:layout_toEndOf="@id/tv_nameuser"
                         android:background="@android:color/transparent"
                         android:contentDescription="@string/love_button_description"
                         android:src="@drawable/love" />
@@ -86,7 +86,7 @@
                     android:src="@drawable/perro" />
 
                 <TextView
-                    android:id="@+id/secondaryTextView"
+                    android:id="@+id/tv_namePet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|left"
@@ -95,7 +95,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/TextView"
+                    android:id="@+id/tv_datePublication"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|right"
@@ -107,14 +107,24 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/tZona"
+            android:id="@+id/tReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:text="Recompensa Bs."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        <TextView
+            android:id="@+id/textReward"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:text="Zona"
+            android:layout_marginTop="28dp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+            app:layout_constraintTop_toBottomOf="@+id/tReward" />
 
         <TextView
             android:id="@+id/tEspecie"
@@ -122,9 +132,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
+            android:textSize="18sp"
             android:text="Especie"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tZona" />
+            app:layout_constraintTop_toBottomOf="@+id/textReward" />
 
         <TextView
             android:id="@+id/textEspecie"
@@ -132,49 +143,29 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Perro"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tEspecie" />
 
+
         <TextView
-            android:id="@+id/tGenero"
+            android:id="@+id/tDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Sexo"
+            android:textSize="18sp"
+            android:text="Descripción"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textEspecie" />
 
         <TextView
-            android:id="@+id/textGenero"
+            android:id="@+id/textDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="Macho"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tGenero" />
-
-        <TextView
-            android:id="@+id/tTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:text="Telefono/Celular"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textGenero" />
-
-        <TextView
-            android:id="@+id/textTelefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:text="72719465"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tTelefono" />
+            app:layout_constraintTop_toBottomOf="@+id/tDescription" />
 
         <TextView
             android:id="@+id/tEmail"
@@ -182,9 +173,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
+            android:textSize="18sp"
             android:text="Email"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textTelefono" />
+            app:layout_constraintTop_toBottomOf="@+id/textDescription" />
 
         <TextView
             android:id="@+id/textEmail"
@@ -192,7 +184,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="32dp"
-            android:text="pepito@gmail.com"
+            android:text="Email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tEmail" />
     </androidx.constraintlayout.widget.ConstraintLayout>
