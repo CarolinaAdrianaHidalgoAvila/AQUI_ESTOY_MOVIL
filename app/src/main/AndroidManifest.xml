@@ -17,7 +17,7 @@
             android:name=".GetPet"
             android:exported="false" />
         <activity
-            android:name=".PostPage"
+            android:name=".portada"
             android:exported="false" />
         <activity
             android:name=".Create_Pet_Found"
@@ -40,7 +40,7 @@
             android:value="AIzaSyBR3w-Ic1FJC4x3Qt5WGzgfxF0TLJutQLg" />
 
         <activity
-            android:name=".portada"
+            android:name=".PostPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
