@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.framework'
+    namespace 'com.aquiestoy.framework'
     compileSdk 33
 
     defaultConfig {
