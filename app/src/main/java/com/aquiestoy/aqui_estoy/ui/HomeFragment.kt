@@ -41,26 +41,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         mainViewModel.loadPublications()
 
-        /*
-        val publication_list = arrayListOf<Publication>(
-            Publication("Jose Herrera", "@Jose2012", "Publicacion de prueba numero 1"),
-            Publication("Miguel Noceda", "@MNoceda", "Publicacion de mas larga Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac est sed nunc sodales viverra nec et dolor. Duis varius condimentum posuere. Praesent sit amet tortor sed dolor aliquet convallis quis et mauris. Proin turpis sem, pretium in tortor vitae, suscipit facilisis nunc. Nullam neque nulla, elementum sed nisl eu, "),
-            Publication("Magu Rojas", "@Maguito2003", "Publicacion corta "),
-            Publication("Maria Holguera", "@La_Maria", "Otra Prueba"),
-        )
-
-        val linearLayoutManager = LinearLayoutManager(container!!.context)
-
-        linearLayoutManager.orientation = LinearLayoutManager.VERTICAL
-        publicationRecyclerView.layoutManager = linearLayoutManager
-
-        val act: FragmentActivity = requireActivity()
-
-        publicationRecyclerView.adapter = PublicationListAdapter(publication_list, act)
-
-
-        */
-        // Inflate the layout for this fragment
         return view
     }
 

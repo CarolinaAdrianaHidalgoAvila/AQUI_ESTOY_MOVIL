@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.aqui_estoy.ui.HomeFragment"
+        android:name="com.aquiestoy.aqui_estoy.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.aqui_estoy.ui.LocationFragment"
+        android:name="com.aquiestoy.aqui_estoy.ui.LocationFragment"
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" />
     <fragment
         android:id="@+id/notificationsFragment"
-        android:name="com.example.aqui_estoy.ui.NotificationsFragment"
+        android:name="com.aquiestoy.aqui_estoy.ui.NotificationsFragment"
         android:label="fragment_notifications"
         tools:layout="@layout/fragment_notifications" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.aqui_estoy.ui.ProfileFragment"
+        android:name="com.aquiestoy.aqui_estoy.ui.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

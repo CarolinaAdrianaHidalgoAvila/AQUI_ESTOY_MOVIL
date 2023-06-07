@@ -18,20 +18,9 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
 
-    @Inject
-    lateinit var fragmentFactory: MainFragmentFactory
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        supportFragmentManager.fragmentFactory = fragmentFactory
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer)as NavHostFragment
-        navController = navHostFragment.navController
-        //val bottomNavigationView=findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-
-        //setupWithNavController(bottomNavigationView, navController)
-
 
     }
 
