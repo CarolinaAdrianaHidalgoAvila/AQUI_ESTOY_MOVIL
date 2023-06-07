@@ -32,12 +32,13 @@ class LostPublicationListAdapter(val list: List<LostPublication>) : RecyclerView
         if (item.userObject.photo != "") {
             Picasso.get().load(item.userObject.photo).into(holder.itemView.findViewById<ImageView>(R.id.imageView_profilePicture))
         }
-        /*
+        val viewPager = holder.itemView.findViewById<ViewPager>(R.id.viewPager_imagesPublication)
         if(item.photos.isNotEmpty()) {
-            val viewPager = holder.itemView.findViewById<ViewPager>(R.id.viewPager_imagesPublication)
+            viewPager.visibility = View.VISIBLE
             val viewPagerAdapter = ViewPagerAdapter(holder.itemView.context, item.photos)
             viewPager.adapter = viewPagerAdapter
-        */
-
+        } else {
+            viewPager.visibility = View.GONE
+        }
     }
 }

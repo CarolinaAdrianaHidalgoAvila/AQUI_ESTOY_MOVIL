@@ -17,7 +17,7 @@ class ViewPagerAdapter(val context: Context, val imageList: List<String>) : Page
     }
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
-        return view === `object` as RelativeLayout
+        return view === `object`
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
@@ -33,6 +33,6 @@ class ViewPagerAdapter(val context: Context, val imageList: List<String>) : Page
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as View?)
     }
 }
