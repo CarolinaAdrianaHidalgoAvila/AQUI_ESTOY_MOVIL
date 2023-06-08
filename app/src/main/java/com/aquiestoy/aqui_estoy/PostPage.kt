@@ -35,8 +35,8 @@ class PostPage : AppCompatActivity() {
         tvDescription = findViewById(R.id.textDescription)
         tvreward = findViewById(R.id.textReward)
 
-        val idUser = "632333ceca137c2c4b95168c"
-        val idPublication = "6388d999441e804fc380f4f5"
+        val idUser = intent.getStringExtra("userId")!!
+        val idPublication = intent.getStringExtra("publicationId")!!
 
         viewModel.publication.observe(this, { publication ->
             publication?.let {
