@@ -8,5 +8,7 @@ data class User(
     val email: String,
     val address: String,
     val photo: String
-) {}
+) {
+    lateinit var pets : List<Pet>
+}
 

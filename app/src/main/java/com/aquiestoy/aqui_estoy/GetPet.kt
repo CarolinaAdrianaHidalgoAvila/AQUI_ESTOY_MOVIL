@@ -13,7 +13,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import com.aquiestoy.aqui_estoy.RestApiAdapterPet as RestApiAdapterPet
 
-
 class GetPet : AppCompatActivity() {
 
     private lateinit var viewModel: GetPetViewModel

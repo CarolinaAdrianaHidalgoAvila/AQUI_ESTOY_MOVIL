@@ -10,10 +10,10 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainNavHostFragment: NavHostFragment() {
     @Inject
-    lateinit var fragmentFactory: MainFragmentFactory
+    lateinit var multipleFragmentFactory: MultipleFragmentFactory
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        childFragmentManager.fragmentFactory = fragmentFactory
+        childFragmentManager.fragmentFactory = multipleFragmentFactory
     }
 }

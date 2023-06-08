@@ -15,7 +15,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView_profilePicture"
+            android:id="@+id/imageView_profilePicturePublication"
             android:layout_width="54dp"
             android:layout_height="60dp"
             android:layout_marginStart="16dp"

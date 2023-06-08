@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
 import com.aquiestoy.aqui_estoy.R
@@ -30,7 +29,7 @@ class LostPublicationListAdapter(val list: List<LostPublication>) : RecyclerView
         holder.itemView.findViewById<TextView>(R.id.textView_usertag).text = item.email
         holder.itemView.findViewById<TextView>(R.id.textView_publication).text = item.description
         if (item.userObject.photo != "") {
-            Picasso.get().load(item.userObject.photo).into(holder.itemView.findViewById<ImageView>(R.id.imageView_profilePicture))
+            Picasso.get().load(item.userObject.photo).into(holder.itemView.findViewById<ImageView>(R.id.imageView_profilePicturePublication))
         }
         val viewPager = holder.itemView.findViewById<ViewPager>(R.id.viewPager_imagesPublication)
         if(item.photos.isNotEmpty()) {
