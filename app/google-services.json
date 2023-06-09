@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "758700131700",
+    "project_id": "aqui-estoy-83518",
+    "storage_bucket": "aqui-estoy-83518.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:758700131700:android:eacb862803bace1e085821",
+        "android_client_info": {
+          "package_name": "com.aquiestoy.aqui_estoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "758700131700-rbtnkm8nmd9o7rn2l31uhhe1qc19kipq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC16AbatN4zB2nM0-5XnnxSXKX9ZaSUV4s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "758700131700-rbtnkm8nmd9o7rn2l31uhhe1qc19kipq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
