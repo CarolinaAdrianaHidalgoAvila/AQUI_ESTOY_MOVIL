@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        /*
         addButton = findViewById(R.id.Add_button)
 
         addButton.setOnClickListener {
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             val windowCreate_Pet_Found = Intent(applicationContext, Create_Pet_Found::class.java)
             startActivity(windowCreate_Pet_Found)
         }
+         */
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.mainContainer) as NavHostFragment
         navController = navHostFragment.navController

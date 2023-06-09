@@ -11,7 +11,7 @@
         android:id="@+id/mainContainer"
         android:name="com.aquiestoy.aqui_estoy.ui.MainNavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="693dp"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph" />
 
